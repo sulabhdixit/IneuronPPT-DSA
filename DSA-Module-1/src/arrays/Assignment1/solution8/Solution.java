@@ -1,17 +1,21 @@
 package arrays.Assignment1.solution8;
 
 class Solution {
-	public int[] findErrorNums(int[] nums) {
-		int N = nums.length, sum = N * (N + 1) / 2;
-		int[] ans = new int[2];
-		boolean[] seen = new boolean[N + 1];
-		for (int num : nums) {
-			sum -= num;
-			if (seen[num])
-				ans[0] = num;
-			seen[num] = true;
-		}
-		ans[1] = sum + ans[0];
-		return ans;
-	}
+		  public int[] findErrorNums(int[] nums) {
+				int [] n1=new int[nums.length+1];
+				int [] arr =new int[2];
+				for(int i:nums){
+					    n1[i]++;    
+				}
+				for(int i=0;i<n1.length-1;i++){
+					if(n1[i]==0) {
+						arr[1]=i;
+					}
+					if(n1[i]==2){
+				     arr[0]=i;
+					}
+				}
+				
+		   return  arr;
+		  }
 }
