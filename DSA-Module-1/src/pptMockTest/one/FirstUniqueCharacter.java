@@ -1,4 +1,4 @@
-package PPTMOCKTEST1;
+package pptMockTest.one;
 
 public class FirstUniqueCharacter {
 	public int firstUniqChar(String s) {
